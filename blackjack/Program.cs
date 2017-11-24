@@ -1,4 +1,5 @@
 ﻿using System;
+using blackjack.classes;
 
 namespace blackjack
 {
@@ -6,7 +7,8 @@ namespace blackjack
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Deck d = new Deck();
+            d.GetDeck();
         }
     }
 }
