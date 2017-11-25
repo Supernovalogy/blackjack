@@ -9,5 +9,6 @@ namespace blackjack.classes
         public string Suit { get; set; }
         public int ActualValue { get; set; }
         public string FaceValue { get; set; }
+        public bool IsAce { get; set; }
     }
 }

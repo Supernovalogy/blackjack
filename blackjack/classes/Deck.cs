@@ -10,7 +10,7 @@ namespace blackjack.classes
 
 
         // faceValues to be used when creating Card instances
-        string[] faceValues = new string[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
+        string[] faceValues = new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
 
         private List<Card> GetHearts()
         {
@@ -27,6 +27,7 @@ namespace blackjack.classes
             {
                 Card card = new Card();
                 card.Suit = "Heart";
+                card.IsAce = false;
                 // Assign the ActualValue depending on the FaceValue
                 if (card.faceValues[n] == "J" | card.faceValues[n] == "Q" | card.faceValues[n] == "K")
                 {
@@ -35,6 +36,7 @@ namespace blackjack.classes
                 else if (card.faceValues[n] == "A")
                 {
                     card.ActualValue = 11;
+                    card.IsAce = true;
                 }
                 else
                 {
@@ -67,6 +69,7 @@ namespace blackjack.classes
             {
                 Card card = new Card();
                 card.Suit = "Diamond";
+                card.IsAce = false;
                 // Assign the ActualValue depending on the FaceValue
                 if (card.faceValues[n] == "J" | card.faceValues[n] == "Q" | card.faceValues[n] == "K")
                 {
@@ -75,6 +78,7 @@ namespace blackjack.classes
                 else if (card.faceValues[n] == "A")
                 {
                     card.ActualValue = 11;
+                    card.IsAce = true;
                 }
                 else
                 {
@@ -106,7 +110,8 @@ namespace blackjack.classes
             while (n < 13)
             {
                 Card card = new Card();
-                card.Suit = "Spades";
+                card.Suit = "Spade";
+                card.IsAce = false;
                 // Assign the ActualValue depending on the FaceValue
                 if (card.faceValues[n] == "J" | card.faceValues[n] == "Q" | card.faceValues[n] == "K")
                 {
@@ -115,6 +120,7 @@ namespace blackjack.classes
                 else if (card.faceValues[n] == "A")
                 {
                     card.ActualValue = 11;
+                    card.IsAce = true;
                 }
                 else
                 {
@@ -147,6 +153,7 @@ namespace blackjack.classes
             {
                 Card card = new Card();
                 card.Suit = "Club";
+                card.IsAce = false;
                 // Assign the ActualValue depending on the FaceValue
                 if (card.faceValues[n] == "J" | card.faceValues[n] == "Q" | card.faceValues[n] == "K")
                 {
@@ -155,6 +162,7 @@ namespace blackjack.classes
                 else if (card.faceValues[n] == "A")
                 {
                     card.ActualValue = 11;
+                    card.IsAce = true;
                 }
                 else
                 {

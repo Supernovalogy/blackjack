@@ -7,8 +7,8 @@ namespace blackjack
     {
         static void Main(string[] args)
         {
-            Deck d = new Deck();
-            d.GetDeck();
+            Deck playingDeck = new Deck();
+            playingDeck.GetDeck();
         }
     }
 }
